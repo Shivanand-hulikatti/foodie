@@ -1,7 +1,15 @@
 import React from 'react';
 import { menu_list } from '../../assets/assets';
 
-const ExploreMenu = ({category,setCategory}) => {
+const ExploreMenu = ({ category, setCategory }) => {
+
+  const handleCategoryClick = (menu_name) => {
+    if (category === menu_name) {
+      setCategory("ALL"); 
+    } else {
+      setCategory(menu_name); 
+    }
+  };
 
   return (
     <div className="mt-10 px-6">
@@ -14,7 +22,7 @@ const ExploreMenu = ({category,setCategory}) => {
           <div
             key={index}
             className="flex-shrink-0 p-2 w-40 min-w-[160px] flex flex-col items-center justify-center text-center cursor-pointer"
-            onClick={() => setCategory(item.menu_name)}
+            onClick={() => handleCategoryClick(item.menu_name)}
           >
             <img
               src={item.menu_image}

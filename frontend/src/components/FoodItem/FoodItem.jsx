@@ -13,7 +13,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           {!cartItems[id] ? (
             <img
               onClick={() => addToCart(id)}
-              src={assets.add_icon_green}
+              src={assets.add_icon_white}
               alt="Add"
               className='h-8 w-8 cursor-pointer rounded-full'
             />
@@ -40,7 +40,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
       </div>
       <div className='mb-2 flex justify-between items-center'>
         <p className='font-semibold text-xl text-gray-900'>{name}</p>
-        <img src={assets.rating_stars} alt="Rating" className='h-6' />
+        <img src={assets.rating_starts} alt="Rating" className='h-6' />
       </div>
       <p className='text-gray-700 mb-4'>{description}</p>
       <p className='font-semibold text-lg text-orange-400'>${price}</p>
